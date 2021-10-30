@@ -1,4 +1,4 @@
-/* RESET */
+/*************** RESET ***************/
 
 * {
   margin: 0;
@@ -15,8 +15,37 @@ html {
   font-size: 62.5%;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
 
-/* STYLE */
+/*************** VARIABLES ***************/
+
+:root {
+  --dark-color: #0F241D;
+  --primary-color: #69B99D;
+  --second-color: #CCF4E6;
+  --background-color-1: #F9F9F9;
+  --background-color-2: #FFFFFF;
+  --title-color: #000000;
+  --text-gray-color: #767676;
+}
+
+/*************** BASE ***************/
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--text-gray-color);
+  background-color: var(--background-color-1)
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+/*************** LAYOUT ***************/
 
 #header {
   width: 100%;
@@ -24,10 +53,37 @@ html {
   height: 7.2rem;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+
+}
+
+.container {
+  width: 90%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+
+
+
 h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 2.1rem;
   line-height: 3.1rem;
   color: #0F241D;
+}
+
+p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #767676;
 }
