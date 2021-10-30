@@ -38,29 +38,40 @@ body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-gray-color);
   background-color: var(--background-color-1)
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
   font: 700 1.875rem 'Poppins', sans-serif;
   color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+
 }
 
 /*************** LAYOUT ***************/
 
 #header {
-  width: 100%;
-  max-width: 37.5rem;
-  height: 7.2rem;
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: ;
 }
 
 nav {
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
 
+.logo span {
+  color: var(--primary-color);
 }
 
 .container {
@@ -69,21 +80,38 @@ nav {
   margin-right: 1.5rem;
 }
 
-
-
-
-h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  font-size: 2.1rem;
-  line-height: 3.1rem;
-  color: #0F241D;
+.grid {
+  display: grid;
+  gap: 2rem
 }
 
-p {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 16px;
-  line-height: 21px;
-  text-align: center;
-  color: #767676;
+.section {
+  padding: 5rem 0;
+}
+
+
+
+
+/*************** HOME ***************/
+
+#home .container{
+margin: 0;
+}
+
+#home .image::before {
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--second-color);
+  position: absolute;
+  top: 0;
+}
+
+#home .image img {
+position: relative;
+right: 2.93rem;
+}
+
+#home .text {
+
 }
