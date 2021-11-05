@@ -20,8 +20,9 @@ img {
 :root {
   --header-height: 4.5rem;
 
+  /* colors */
   --hue: 159;
-
+  /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
@@ -53,7 +54,7 @@ body {
 .button {
   width: 214px;
   height: 56px;
-  display: inline;
+  display: inline-flex;
   background-color: var(--base-color);
   border-radius: 4px;
   font-family: 'DM Sans', sans-serif;
@@ -62,7 +63,7 @@ body {
   line-height: 21px;
   color: var(--text-color-light);
   padding: 17px 32px;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
 
 .button:hover {
@@ -73,8 +74,8 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    #69b99d,
-    rgba(204, 244, 230, 0.34)
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
 
@@ -82,9 +83,9 @@ body {
   height: 1px;
   background: linear-gradient(
     270deg,
-    rgba(204, 244, 230, 0.34),
-    #69b99d
-      );
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
 }
 
 /*************** LAYOUT ***************/
@@ -130,8 +131,9 @@ body {
   background-color: var(--body-color);
 }
 
-#header .scroll {
-  box-shadow: 0px 0px 12px  rgba(0, 0, 0, 0.1);
+#header.scroll {
+  background-color: yellowgreen;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
 
 main {
@@ -176,9 +178,11 @@ nav ul li a::after {
   width: 0%;
   height: 2px;
   background: var(--base-color);
+
   position: absolute;
   left: 0;
   bottom: -1.5rem;
+
   transition: width 0.2s;
 }
 
@@ -191,6 +195,10 @@ nav .menu {
   visibility: hidden;
   top: -20rem;
   transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 nav.show .menu {
@@ -209,19 +217,14 @@ nav.show .menu {
   place-content: center;
 }
 
-nav .menu ul {
-  display: none;
-}
-
 /************** MOSTRAR MENU ********************/
-
-
-nav.show ul.grid {
-  gap: 4rem;
-}
 
 nav.show .menu ul {
   display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 /******************* Toggle Menu *********************/
@@ -240,7 +243,7 @@ nav .icon-close {
   top: -1.5rem;
   right: 1.5rem;
 
-  transition: .2s;
+  transition: 0.2s;
 }
 
 nav.show div.icon-close {
@@ -322,7 +325,6 @@ nav.show div.icon-close {
 
 #about .image img {
   position: relative;
-
 }
 
 #about .image img,
@@ -335,7 +337,6 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
-
 /*************** SERVICES ***********************/
 
 .cards.grid {
@@ -346,7 +347,7 @@ nav.show div.icon-close {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
-  border-radius: .25rem .25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
 
