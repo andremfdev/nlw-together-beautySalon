@@ -28,3 +28,5 @@ window.addEventListener('scrool', function () {
     header.classList.remove('scroll')
   }
 })
+
+// TESTEMONIALS SWIPER
